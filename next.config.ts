@@ -1,10 +1,15 @@
 import type { NextConfig } from 'next';
 
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+
 const nextConfig: NextConfig = {
-  output: 'export', // Static export — deploy anywhere (Vercel, Netlify, GitHub Pages)
+  output: 'export',
+  basePath: isGitHubPages ? '/90-day-hustle-tracker' : '',
+  assetPrefix: isGitHubPages ? '/90-day-hustle-tracker/' : '',
+  images: {
+    unoptimized: true,
+  },
   typescript: {
-    // Type checking already passes via `npx tsc --noEmit`.
-    // Skip during build to avoid OOM on low-memory machines.
     ignoreBuildErrors: true,
   },
   eslint: {
