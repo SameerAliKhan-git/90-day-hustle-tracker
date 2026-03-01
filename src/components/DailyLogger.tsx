@@ -8,9 +8,9 @@ interface Props {
 }
 
 const CATEGORIES = [
-  { value: 'ugc-net' as const, label: 'UGC NET', color: '#818cf8' },
-  { value: 'data-science' as const, label: 'Data Science', color: '#34d399' },
-  { value: 'job-prep' as const, label: 'Job Prep', color: '#fbbf24' },
+  { value: 'ugc-net' as const, label: 'UGC NET', color: '#a78bfa' },
+  { value: 'data-science' as const, label: 'Data Science', color: '#00f5d4' },
+  { value: 'job-prep' as const, label: 'Job Prep', color: '#ff4d6d' },
 ];
 
 const MOODS = [
@@ -278,19 +278,19 @@ export function DailyLogger({ data, updateData }: Props) {
           label="📚 UGC NET Topics Covered"
           topics={todayLog.ugcNetTopics}
           onChange={topics => updateTodayLog(log => ({ ...log, ugcNetTopics: topics }))}
-          color="#818cf8"
+          color="#a78bfa"
         />
         <TopicInput
           label="🤖 DS Topics/Sections Done"
           topics={todayLog.dsTopics}
           onChange={topics => updateTodayLog(log => ({ ...log, dsTopics: topics }))}
-          color="#34d399"
+          color="#00f5d4"
         />
         <TopicInput
           label="💼 Job Actions Taken"
           topics={todayLog.jobActions}
           onChange={topics => updateTodayLog(log => ({ ...log, jobActions: topics }))}
-          color="#fbbf24"
+          color="#ff4d6d"
         />
       </div>
     </div>

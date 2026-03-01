@@ -12,9 +12,9 @@ interface Props {
 }
 
 const GOAL_LABELS: Record<StudyGoal, { label: string; emoji: string; color: string }> = {
-  'ugc-net': { label: 'UGC NET JRF', emoji: '📚', color: '#818cf8' },
-  'data-science': { label: 'Data Science', emoji: '🧪', color: '#34d399' },
-  'job-prep': { label: 'Job Prep', emoji: '💼', color: '#fbbf24' },
+  'ugc-net': { label: 'UGC NET JRF', emoji: '📚', color: '#a78bfa' },
+  'data-science': { label: 'Data Science', emoji: '🧪', color: '#00f5d4' },
+  'job-prep': { label: 'Job Prep', emoji: '💼', color: '#ff4d6d' },
 };
 
 const SESSION_DURATION = 60 * 60; // 1 hour in seconds
@@ -243,7 +243,7 @@ export function PomodoroTimer({ data, updateData }: Props) {
     ? GOAL_LABELS[selectedGoal]
     : GOAL_LABELS[sessionGoalRef.current];
 
-  const ringColor = timerState === 'break' ? '#34d399' : activeGoal.color;
+  const ringColor = timerState === 'break' ? '#00f5d4' : activeGoal.color;
 
   return (
     <div className="pomodoro">

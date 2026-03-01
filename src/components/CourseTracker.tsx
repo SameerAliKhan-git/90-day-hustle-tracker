@@ -159,8 +159,8 @@ export function CourseTracker({ data, updateData }: Props) {
             />
             <defs>
               <linearGradient id="courseGradient">
-                <stop offset="0%" stopColor="#34d399" />
-                <stop offset="100%" stopColor="#6ee7b7" />
+                <stop offset="0%" stopColor="#00f5d4" />
+                <stop offset="100%" stopColor="#5eead4" />
               </linearGradient>
             </defs>
             <text x="60" y="55" textAnchor="middle" fill="#f0f0f5" fontSize="20" fontWeight="800" fontFamily="JetBrains Mono, monospace">

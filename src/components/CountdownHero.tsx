@@ -25,7 +25,7 @@ export function CountdownHero() {
         </div>
         <div className="hero-title">
           <h1>90-DAY HUSTLE</h1>
-          <p className="hero-subtitle">UGC NET JRF &bull; Data Science &bull; Job Ready</p>
+          <p className="hero-subtitle"><span style={{color:'#a78bfa'}}>UGC NET JRF</span> &bull; <span style={{color:'#00f5d4'}}>Data Science</span> &bull; <span style={{color:'#ff4d6d'}}>Job Ready</span></p>
           <p className="hero-deadline">Deadline: May 30, 2026</p>
         </div>
       </div>
