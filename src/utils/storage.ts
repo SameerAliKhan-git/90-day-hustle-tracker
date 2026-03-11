@@ -44,6 +44,7 @@ export interface CourseProgress {
 export interface TrackerData {
   dailyLogs: Record<string, DailyLog>;
   courseProgress: CourseProgress;
+  studyPlanProgress: Record<string, boolean>; // topic id -> completed
   ugcNetProgress: {
     totalTopicsCompleted: number;
     totalTopics: number;
@@ -80,6 +81,7 @@ const defaultData: TrackerData = {
     lastWatchedSectionId: 0,
     totalMinutesWatched: 0,
   },
+  studyPlanProgress: {},
   ugcNetProgress: {
     totalTopicsCompleted: 0,
     totalTopics: 50, // Approximate UGC NET syllabus topics

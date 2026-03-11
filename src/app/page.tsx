@@ -10,9 +10,10 @@ import { CourseTracker } from '../components/CourseTracker';
 import { DataManager } from '../components/DataManager';
 import { PomodoroTimer } from '../components/PomodoroTimer';
 import { Timetable } from '../components/Timetable';
+import { StudyPlan } from '../components/StudyPlan';
 import { useTracker } from '../hooks/useTracker';
 
-type Tab = 'timer' | 'schedule' | 'today' | 'progress' | 'course' | 'update' | 'history';
+type Tab = 'timer' | 'schedule' | 'today' | 'progress' | 'course' | 'studyplan' | 'update' | 'history';
 
 export default function Home() {
   const { data, updateData } = useTracker();
@@ -60,6 +61,12 @@ export default function Home() {
           📺 Course
         </button>
         <button
+          className={`tab-btn ${activeTab === 'studyplan' ? 'active' : ''}`}
+          onClick={() => setActiveTab('studyplan')}
+        >
+          📘 Syllabus
+        </button>
+        <button
           className={`tab-btn ${activeTab === 'update' ? 'active' : ''}`}
           onClick={() => setActiveTab('update')}
         >
@@ -89,6 +96,9 @@ export default function Home() {
         )}
         {activeTab === 'course' && (
           <CourseTracker data={data} updateData={updateData} />
+        )}
+        {activeTab === 'studyplan' && (
+          <StudyPlan data={data} updateData={updateData} />
         )}
         {activeTab === 'update' && (
           <GoalUpdater data={data} updateData={updateData} />
